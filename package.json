@@ -1,7 +1,7 @@
 {
   "name": "generator-lx-react",
   "keywords":["yeoman-generator","lx","react"],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "来学react-webpack快速搭建框架",
   "main": "index.js",
   "private": false,
