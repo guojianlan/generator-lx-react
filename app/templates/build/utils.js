@@ -1,4 +1,4 @@
-var config = require('../config/')
+var config = require('../config')
 var path = require('path');
 
 exports.assetsPath = function (_path) {

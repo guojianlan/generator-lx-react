@@ -6,7 +6,8 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import rootRoute from './routes/routes.js'
 import * as reducers from './reducers'
-import 'assets/css/style.scss'
+require('../webModule/assets/css/global.scss')
+
 const reducer = combineReducers({
   ...reducers,
   routing: routerReducer

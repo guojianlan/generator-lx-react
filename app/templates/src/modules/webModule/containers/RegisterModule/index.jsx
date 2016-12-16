@@ -1,9 +1,12 @@
 import React from 'react'
-
+import style from './Register.scss'
 export default class Index extends React.Component{
 	render(){
 		return (
 				<div className="container">
+						<div className={style.hehe}>
+							<div className={style.haha}>register</div>
+						</div>
 			      <div className="form-signin" role="form">
 			        <h2 className="form-signin-heading">Please sign in</h2>
 			        <input type="email" className="form-control" placeholder="Email address" defaultValue="" />

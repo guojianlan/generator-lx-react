@@ -64,12 +64,7 @@ module.exports = {
       }
     ]
   },
-  postcss: function () {
-    return [
-    	require('autoprefixer')({
-        browsers: ['last 2 versions']
-      })];
-  }
+  postcss:[require('autoprefixer')({browsers: ['last 2 versions']})]	
 }
 
 function getEntry(globPath) {

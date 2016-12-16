@@ -1,7 +1,7 @@
 const routes = {
   childRoutes:[
     {
-      path: '/',
+      path: '/static/react',
       component:require('../containers/AppModule/index.jsx').default,
       indexRoute:{
         getComponents(partialNextState,cb){

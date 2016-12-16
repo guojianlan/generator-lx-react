@@ -1,5 +1,6 @@
 var config = require('../config')
 var webpack = require('webpack');
+var path = require('path')
 var baseWebpackConfig = require('./webpack-base-conf.js')
 var merge = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -13,7 +14,14 @@ module.exports = merge(baseWebpackConfig, {
 	module: {
     loaders:[
     	{
-        test: /\.scss$/, loader: "style-loader!css-loader!sass-loader"
+        test: /\.scss$/, 
+        exclude:path.join(__dirname,'../src/modules/'+config.moduleName+'Module/assets/css'),
+        loader: "style-loader!css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader!postcss-loader"
+      },
+      {
+        test: /\.scss$/, 
+        include:path.join(__dirname,'../src/modules/'+config.moduleName+'Module/assets/css'),
+        loader: "style-loader!css-loader?sourceMap!sass-loader!postcss-loader"
       }
     ]
   },

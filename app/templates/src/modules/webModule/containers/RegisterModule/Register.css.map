@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAK;EACJ,UAAU,EAAE,IAAI;EACf,WAAK;IACL,KAAK,EAAC,GAAG",
+"sources": ["Register.scss"],
+"names": [],
+"file": "Register.css"
+}
