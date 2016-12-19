@@ -7,6 +7,7 @@ var opn = require('opn')
 var fs=require('fs');
 var os=require('os');
 var webpackConfig = require('./webpack-dev-conf.js')
+var proxyMiddleware = require('http-proxy-middleware')
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config[config.moduleName+'dev'].port
@@ -33,7 +34,13 @@ compiler.plugin('compilation', function (compilation) {
     cb()
   })
 })
-
+Object.keys(proxyTable).forEach(function (context) {
+  var options = proxyTable[context]
+  if (typeof options === 'string') {
+    options = { target: options }
+  }
+  app.use(proxyMiddleware(context, options))
+})
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())

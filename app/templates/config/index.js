@@ -7,10 +7,13 @@ module.exports = {
 		assetsRoot: path.resolve(__dirname, '../dist/web'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    proxyTable: {
+    },
     definePlugin:{
     	"process.env.NODE_ENV":JSON.stringify('dev'),
     	API_ROOT:JSON.stringify('woca')
     }
+   
 	},
 	webbuild:{
 		index: path.resolve(__dirname, '../dist/web/static/react/index.html'),
